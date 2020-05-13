@@ -1,0 +1,54 @@
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+		
+		<script
+			src="https://code.jquery.com/jquery-3.2.1.min.js">
+			</script>
+			
+			<script>
+		
+			
+		
+			function turnLEDOff() {
+				$.post( "https://api.particle.io/v1/devices/e00fce6885ba6ffc3a46cfdd/redlight/"
+				, { params: "of", 
+				access_token: "8d39519c3929d756819c92fd6f5a750fbb8034dc"});
+				}
+			
+	
+			function turnLED(parm) {
+				$.post( "https://api.particle.io/v1/devices/e00fce6885ba6ffc3a46cfdd/redlight/"
+				, { params: parm, 
+				access_token: "8d39519c3929d756819c92fd6f5a750fbb8034dc"});
+				}
+				  
+				
+				
+			</script>
+
+
+    </head>
+    <body>
+        <h1>TURN ON</h1>
+
+        <button id="onButton" onclick='turnLED("red");'>RED</button>
+        <hr />
+        <button id="onButton" onclick='turnLED("green");'>green</button>
+        <hr />
+        <button id="onButton" onclick='turnLED("blue");'>blue</button>
+        <hr />
+
+		<h2>TURN OFF)</h2>
+        <button id="onButton" onclick='turnLED("of");'>OFF</button>
+        <hr />
+		<p id ="test"> </p>
+
+
+    </body>
+	
+	
+</html>
+
